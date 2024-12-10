@@ -4,8 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilled Guild – Heroic & Mythic Raiding</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        button.menu-toggle {
+            background: #1E90FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button.menu-toggle:hover {
+            background: #0056b3;
+        }
+
+        /* Header */
+        header {
+            background: url('hero-banner.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .guild-title {
+            font-size: 2.5rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+        }
+
+        #about {
+            background: linear-gradient(to bottom, #282c34, #3a3f47);
+            color: white;
+        }
+
+        #recruitment {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        #events {
+            background: url('events-bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        /* Expansion Image */
+        .expansion-image img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .expansion-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #282c34, #3a3f47);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -24,69 +122,49 @@
     </header>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div class="container">
             <h2>The War Within: Join Skilled for Epic Progression</h2>
             <p><span class="guild-name">Skilled</span> is actively recruiting dedicated players to join our community and conquer the challenges of the new <b>War Within</b> expansion. Whether you're focused on high-level progression, enjoy Mythic+ dungeons, or want to be part of a driven guild, we welcome all who are eager to take on Azeroth's greatest challenges.</p>
             <div class="expansion-image">
-                <!-- Replace with raid-night.png -->
                 <img src="raid-night.png" alt="Raid Night" />
             </div>
         </div>
     </section>
 
     <!-- Recruitment Section -->
-    <section id="recruitment">
+    <section id="recruitment" data-aos="fade-right">
         <div class="container">
             <h2>Recruitment – Seeking Reliable Raiders</h2>
             <p><span class="guild-name">Skilled</span> is recruiting players for Heroic and Mythic progression. If you are a reliable player with a passion for teamwork, we want you!</p>
-
             <h3>What We’re Looking For:</h3>
             <ul>
                 <li><strong>Raiders:</strong> Dedicated players for Heroic & Mythic progression. Experience is a plus, but a positive attitude and teamwork are essential.</li>
                 <li><strong>Classes/Specs Needed:</strong> Open to all exceptional players.</li>
                 <li><strong>Alt Raiders/Secondary Team:</strong> For players looking for a more relaxed environment for Saturday alt runs.</li>
             </ul>
-
             <h3>Raid Schedule:</h3>
             <ul>
                 <li><strong>Main Progression Raids:</strong> Tuesday and Thursday, 9 PM – 12 AM EST</li>
                 <li><strong>Alt Raid/Secondary Team:</strong> Saturday, 9 PM – 12 AM EST</li>
             </ul>
-
-            <h3>What We Offer:</h3>
-            <ul>
-                <li><strong>Consistent Progression:</strong> Focused approach to Heroic and Mythic content.</li>
-                <li><strong>Active Guild:</strong> Weekly events including raids, Mythic+, and occasional PvP activities.</li>
-                <li><strong>Supportive Environment:</strong> Friendly leadership and welcoming space for all playstyles.</li>
-                <li><strong>Alt/Secondary Raids:</strong> Organized runs for gearing alts.</li>
-            </ul>
-
-            <h3>How to Join:</h3>
-            <p>If you’re interested in joining, contact us:</p>
-            <ul>
-                <li><strong>Battle.net:</strong> Morph#11503</li>
-                <li><strong>Discord:</strong> Morph#6932</li>
-            </ul>
         </div>
     </section>
 
-   <!-- Events Section -->
-    <section id="events">
+    <!-- Events Section -->
+    <section id="events" data-aos="fade-left">
         <div class="container">
             <h2>Upcoming Events</h2>
             <p>Join us for weekly raids, Mythic+ dungeons, and other fun activities. Check out our guild’s calendar for more details.</p>
             <p><strong>Join our Discord community for real-time updates and to coordinate with other members:</strong></p>
-            <p><!-- Discord Link with Tooltip -->
             <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-link" id="discord-link" aria-label="Join our Discord">
                 Join Discord
                 <span class="tooltip-text">Join our Discord server!</span>
             </a>
-            </p>
         </div>
     </section>
-  
-  <!-- Footer Section -->
+
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2024 <span class="guild-name">Skilled</span>. All rights reserved.</p>

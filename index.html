@@ -28,16 +28,19 @@
             color: #ffeb8c;
         }
 
-        /* Header */
-header {
-    background: url('header-banner-imagee.pnggggggggggggggggggg') no-repeat center center; /* Add the banner image */
-    background-size: cover; /* Ensure it covers the entire header */
-    background-attachment: fixed; /* Keep the background fixed during scrolling */
+        header {
+    background-color: rgba(47, 49, 54, 0.8); /* Slight transparency */
     text-align: center;
     padding: 20px 0;
     color: #f7d358;
     position: relative;
     z-index: 2;
+
+    /* Add the banner image */
+    background-image: url('header-banner-imagee.png'); /* Replace with your image path */
+    background-size: contain; /* Fit the entire image */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-position: center; /* Center the image in the header */
 }
 
         header h1 {

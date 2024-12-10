@@ -43,17 +43,27 @@
     background-position: right; /* Position the image in the header */
 }
 
-        header h1 {
-    font-size: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent dark background */
-    color: #f7d358; /* Keep the text gold */
-    display: inline-block; /* Fit the background to the text only */
-    padding: 10px 20px; /* Add some padding around the text */
-    border-radius: 5px; /* Optional: Round the edges for a polished look */
+        /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
+
+/* Header Text Styling */
+header h1 {
+    font-family: 'Anton', sans-serif; /* Use a bold, impactful font */
+    font-size: 3rem; /* Increase font size */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    color: #f7d358; /* Keep gold text color */
+    display: inline-block; /* Ensure the background wraps only around the text */
+    padding: 15px 25px; /* Add more padding for balance */
+    border-radius: 8px; /* Rounded edges */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
 }
 
+/* Highlight "Skilled" */
 header h1 span {
-    color: #ff5733; /* Keep the updated color for SKILLED */
+    background: linear-gradient(90deg, #ff5733, #f7d358);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
         nav {

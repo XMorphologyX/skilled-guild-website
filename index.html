@@ -29,14 +29,16 @@
         }
 
         /* Header */
-        header {
-            background-color: rgba(47, 49, 54, 0.8); /* Slight transparency for background */
-            text-align: center;
-            padding: 20px 0;
-            color: #f7d358;
-            position: relative;
-            z-index: 2;
-        }
+header {
+    background: url('header-banner-image.png') no-repeat center center; /* Add the banner image */
+    background-size: cover; /* Ensure it covers the entire header */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    text-align: center;
+    padding: 20px 0;
+    color: #f7d358;
+    position: relative;
+    z-index: 2;
+}
 
         header h1 {
             font-size: 2.5rem;

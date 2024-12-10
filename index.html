@@ -12,6 +12,7 @@
             color: #f4f4f4; /* Light text */
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
         }
 
         a {
@@ -225,6 +226,17 @@
     </footer>
 
     <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
         // Example: Show a greeting when the page loads
         window.onload = function() {
             alert("Welcome to Skilled Guild's website!");

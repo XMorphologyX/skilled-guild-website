@@ -6,6 +6,7 @@ body {
     color: #f4f4f4;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 .container {
@@ -14,10 +15,11 @@ body {
     padding: 20px;
 }
 
+/* Header Section */
 header {
     background: url('war-within-header.jpg') no-repeat center center/cover;
     color: white;
-    padding: 30px 0;
+    padding: 60px 0;
     text-align: center;
     font-size: 2.5rem;
     position: relative;
@@ -31,91 +33,76 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);  /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
     z-index: -1;
 }
 
 header .guild-name {
     color: #f4a261; /* Customize with guild's branding color */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h2, h3 {
-    color: #f4a261;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-button {
-    padding: 10px;
+nav ul li a:hover {
     background-color: #f4a261;
-    color: white;
+    color: #1c1c1c;
+}
+
+/* Smooth Scroll Anchor Highlight */
+nav ul li a.active {
+    background-color: #f4a261;
+    color: #1c1c1c;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
     border: none;
+    color: white;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    transition: transform 0.3s ease;
 }
 
-footer {
-    background-color: #121212;
-    text-align: center;
-    padding: 20px;
-    color: #f4f4f4;
+.menu-toggle.rotated {
+    transform: rotate(90deg);
 }
 
-footer a {
-    color: #f4a261;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        background-color: #121212;
-        padding: 20px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul.active {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-}
-
+/* Section Styling */
 section {
     background-color: #121212;
-    padding: 40px 0;
+    padding: 60px 0;
     color: #f4f4f4;
     position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 section::before {
@@ -131,63 +118,70 @@ section::before {
 
 section h2, section h3 {
     color: #f4a261;
+    margin-bottom: 20px;
 }
 
 section p, section ul {
     color: #ddd;
 }
 
-/* Contact form */
-form {
-    background-color: #1c1c1c;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #444;
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #333;
-    color: #f4f4f4;
-    border: 1px solid #555;
-    border-radius: 5px;
+ul li {
+    margin-bottom: 10px;
 }
 
-form button {
+/* Buttons */
+button {
+    padding: 10px 20px;
     background-color: #f4a261;
     color: white;
-    padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-}
-
-/* Error message */
-#error-message {
-    color: red;
     font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Expansion Image Styling */
-.expansion-image img {
-    max-width: 100%;  /* Ensure it scales correctly with the container */
-    height: auto;     /* Maintain aspect ratio */
-    display: block;   /* Remove extra space below the image */
-    margin: 0 auto;   /* Center image */
+button:hover {
+    background-color: #ff7d47;
+    transform: scale(1.05);
 }
-/* Style for Discord Link */
+
+/* Footer */
+footer {
+    background-color: #121212;
+    text-align: center;
+    padding: 20px;
+    color: #f4f4f4;
+}
+
+footer a {
+    color: #f4a261;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff7d47;
+}
+
+/* Discord Link */
 .discord-link {
-    color: #f4a261; /* Gold color to match other links */
+    color: #f4a261;
     font-size: 1.2rem;
     text-decoration: none;
     background-color: #2f3136;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
     position: relative;
     transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .discord-link:hover {
@@ -195,11 +189,11 @@ form button {
     color: #fff;
 }
 
-/* Tooltip Style */
+/* Tooltip */
 .tooltip-text {
     visibility: hidden;
     position: absolute;
-    bottom: 125%; /* Position the tooltip above the link */
+    bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -215,4 +209,42 @@ form button {
 .discord-link:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+/* Expansion Image Styling */
+.expansion-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        background-color: #121212;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
 }

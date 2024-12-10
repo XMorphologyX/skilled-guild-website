@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilled Guild – Heroic & Mythic Raiding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
         body {
@@ -12,6 +13,7 @@
             color: #f4f4f4; /* Light text */
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         a {
@@ -27,12 +29,14 @@
         header {
             background-color: #2f3136;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
             color: #f7d358;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         header h1 span {
@@ -58,24 +62,29 @@
         nav ul li a {
             color: #f4f4f4;
             font-size: 1.2rem;
-            padding: 5px 10px;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
             background-color: #f7d358;
             color: #1c1c1c;
-            border-radius: 5px;
+            transform: scale(1.1);
         }
 
         /* Section Styles */
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
+            position: relative;
         }
 
         section h2 {
             color: #f7d358;
             margin-bottom: 20px;
+            font-size: 2.5rem;
         }
 
         section ul {
@@ -83,22 +92,64 @@
             padding: 0;
             margin: 20px 0;
             line-height: 1.8;
+            font-size: 1.1rem;
         }
 
         section ul li {
             margin: 10px 0;
         }
 
+        /* Discord Button */
+        .discord-button {
+            display: inline-block;
+            background-color: #7289da; /* Discord's primary color */
+            color: #ffffff; /* White text */
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .discord-button:hover {
+            background-color: #5a73bc; /* Slightly darker shade on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+
+        .discord-button:active {
+            transform: scale(1); /* Reset zoom effect on click */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 20px;
             background-color: #2f3136;
             color: #f4f4f4;
+            margin-top: 40px;
         }
 
         footer a {
             margin: 0 10px;
+            font-size: 1.1rem;
+        }
+
+        footer a:hover {
+            color: #f7d358;
+            text-decoration: underline;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -124,7 +175,7 @@
             <p><span class="guild-name">Skilled</span> is actively recruiting dedicated players to join our community and conquer the challenges of the new <b>War Within</b> expansion. Whether you're focused on high-level progression, enjoy Mythic+ dungeons, or want to be part of a driven guild, we welcome all who are eager to take on Azeroth's greatest challenges.</p>
             <div class="expansion-image">
                 <!-- Replace with raid-night.png -->
-                <img src="raid-night.png" alt="Raid Night" />
+                <img src="raid-night.png" alt="Raid Night" style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);" />
             </div>
         </div>
     </section>
@@ -157,35 +208,45 @@
             <li><strong>Battle.net:</strong> Morph#11503</li>
             <li><strong>Discord:</strong> Morph#6932</li>
         </ul>
-        <!-- Discover More Section -->
-<section id="links">
-    <div class="container">
-        <h2>Discover More About Us</h2>
-        <p>
-            Be part of our action-packed weekly activities, including progression raids, Mythic+ dungeons, and special guild events. Explore our calendar for detailed schedules and stay informed about the latest updates.
-        </p>
-        <p>
-            <strong>Connect with our community on Discord for real-time updates, event coordination, and to engage with fellow members:</strong>
-        </p>
-        <p>
-    <!-- Discord Link as Button -->
-    <a href="https://discord.gg/qzAyheAHGr" 
-       target="_blank" 
-       class="discord-button" 
-       id="discord-link" 
-       aria-label="Join our Discord">
-        Join Our Discord
-    </a>
-</p>
-    </div>
-</section>
+    </section>
 
-   <!-- Footer Section -->
+    <!-- Discover More Section -->
+    <section id="links">
+        <div class="container">
+            <h2>Discover More About Us</h2>
+            <p>
+                Be part of our action-packed weekly activities, including progression raids, Mythic+ dungeons, and special guild events. Explore our calendar for detailed schedules and stay informed about the latest updates.
+            </p>
+            <p>
+                <strong>Connect with our community on Discord for real-time updates, event coordination, and to engage with fellow members:</strong>
+            </p>
+            <p>
+                <!-- Discord Link as Button -->
+                <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button" id="discord-link" aria-label="Join our Discord">
+                    Join Our Discord
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2025 <span class="guild-name">Skilled</span>. All rights reserved.</p>
             <p><a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">RAIDER.IO</a> | <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">Warcraft Logs</a> | <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">WoW Armory</a></p>
         </div>
     </footer>
+
+    <script>
+        // Optional: Smooth Scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

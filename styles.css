@@ -79,3 +79,16 @@ footer {
     background-color: #2f3136;
     color: #f4f4f4;
 }
+
+.discord-button:hover .tooltip-text {
+    display: inline-block;
+    position: absolute;
+    background: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+

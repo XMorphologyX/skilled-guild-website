@@ -3,77 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skilled WoW Guild</title>
+    <title>Skilled Guild – Heroic & Mythic Raiding</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1 class="guild-name">Skilled Guild</h1>
-        <p>Welcome to the ultimate World of Warcraft community!</p>
+        <div class="container">
+            <h1 class="guild-title">Join <span class="guild-name">Skilled</span> – Heroic & Mythic Raiding</h1>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#recruitment">Recruitment</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
-        <ul>
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#recruitment">Recruitment</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" id="discord-link">Join Our Discord</a></li>
-        </ul>
-    </nav>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>Skilled is a community of passionate World of Warcraft players who aim to conquer Azeroth's toughest challenges. From Mythic+ dungeons to epic raids, we do it all!</p>
-        <div class="expansion-image">
-            <img src="raid-night.png" alt="World of Warcraft: War Within Expansion">
+        <div class="container">
+            <h2>The War Within: Join Skilled for Epic Progression</h2>
+            <p><span class="guild-name">Skilled</span> is actively recruiting dedicated players to join our community and conquer the challenges of the new <b>War Within</b> expansion. Whether you're focused on high-level progression, enjoy Mythic+ dungeons, or want to be part of a driven guild, we welcome all who are eager to take on Azeroth's greatest challenges.</p>
+            <div class="expansion-image">
+                <img src="raid-night.png" alt="Raid Night" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruitment Section -->
+    <section id="recruitment">
+        <div class="container">
+            <h2>Recruitment – Seeking Reliable Raiders</h2>
+            <p><span class="guild-name">Skilled</span> is recruiting players for Heroic and Mythic progression. If you are a reliable player with a passion for teamwork, we want you!</p>
+            <h3>What We’re Looking For:</h3>
+            <ul>
+                <li><strong>Raiders:</strong> Dedicated players for Heroic & Mythic progression. Experience is a plus, but a positive attitude and teamwork are essential.</li>
+                <li><strong>Classes/Specs Needed:</strong> Open to all exceptional players.</li>
+            </ul>
         </div>
     </section>
 
     <!-- Events Section -->
     <section id="events">
-        <h2>Events</h2>
-        <ul>
-            <li>Weekly Raids: Tuesdays and Thursdays at 9 PM EST</li>
-            <li>Mythic+ Dungeon Nights: Saturdays at 9 PM EST</li>
-            <li>Community Nights: Fridays at 9 PM EST</li>
-        </ul>
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <p>Join us for weekly raids, Mythic+ dungeons, and other fun activities. Check out our guild’s calendar for more details.</p>
+        </div>
     </section>
 
-    <!-- Recruitment Section -->
-    <section id="recruitment">
-        <h2>Join Us</h2>
-        <p>We’re recruiting skilled players for our upcoming challenges. If you’re a team player and love WoW, we’d love to have you on board!</p>
-        <button onclick="window.location.href='recruitment.html'">Apply Now</button>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- Contact Us Section -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us on Battle.Net or Discord</p>
-        </section>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to join us, feel free to reach out!</p>
+            <form id="contact-form" onsubmit="return validateForm()">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                
+                <p id="error-message"></p>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Skilled Guild. All rights reserved.</p>
-        <p>
-            <a href="privacy-policy.html">Privacy Policy</a> |
-            <a href="terms-of-service.html">Terms of Service</a>
-        </p>
-        <p>Follow us on:
-            <a href="https://twitter.com/skilledguild" target="_blank">Twitter</a> |
-            <a href="https://twitch.tv/skilledguild" target="_blank">Twitch</a>
-        </p>
+        <div class="container">
+            <p>&copy; 2024 <span class="guild-name">Skilled</span>. All rights reserved.</p>
+        </div>
     </footer>
-
-    <!-- Tooltip for Discord Link -->
-    <div class="tooltip-text">
-        Join our Discord for real-time guild updates and community events!
-    </div>
 </body>
 </html>

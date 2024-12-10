@@ -4,84 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilled Guild – Heroic & Mythic Raiding</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c; /* Dark background */
+            color: #f4f4f4; /* Light text */
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #f7d358; /* Gold highlight for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffeb8c;
+        }
+
+        /* Header */
+        header {
+            background-color: #2f3136;
+            text-align: center;
+            padding: 20px 0;
+            color: #f7d358;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header h1 span {
+            color: #ffeb8c; /* Highlighted guild name */
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #f4f4f4;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #f7d358;
+            color: #1c1c1c;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #f7d358;
+            margin-bottom: 20px;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        section ul li {
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2f3136;
+            color: #f4f4f4;
+        }
+
+        footer a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1 class="guild-title">Join <span class="guild-name">Skilled</span> – Heroic & Mythic Raiding</h1>
-            <button class="menu-toggle">☰</button>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#recruitment">Recruitment</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Join <span>Skilled</span> – Heroic & Mythic Raiding Recruitment</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Raid Schedule</a></li>
+                <li><a href="#offer">What We Offer</a></li>
+                <li><a href="#contact">How to Join</a></li>
+                <li><a href="#links">Discover More</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <h2>The War Within: Join Skilled for Epic Progression</h2>
-            <p><span class="guild-name">Skilled</span> is actively recruiting dedicated players to join our community and conquer the challenges of the new <b>War Within</b> expansion. Whether you're focused on high-level progression, enjoy Mythic+ dungeons, or want to be part of a driven guild, we welcome all who are eager to take on Azeroth's greatest challenges.</p>
-            <div class="expansion-image">
-                <img src="raid-night.png" alt="Raid Night" />
-            </div>
-        </div>
+        <h2>Join the <span>Skilled</span> Community</h2>
+        <p>
+            <strong>Skilled</strong> is actively recruiting dedicated and reliable players to join our raiding community. Whether you’re focused on progression, enjoy Mythic+ dungeons, or want to be part of an active guild, there is a place for you.
+        </p>
     </section>
 
-    <!-- Recruitment Section -->
-    <section id="recruitment">
-        <div class="container">
-            <h2>Recruitment – Seeking Reliable Raiders</h2>
-            <p><span class="guild-name">Skilled</span> is recruiting players for Heroic and Mythic progression. If you are a reliable player with a passion for teamwork, we want you!</p>
-            <h3>What We’re Looking For:</h3>
-            <ul>
-                <li><strong>Raiders:</strong> Dedicated players for Heroic & Mythic progression. Experience is a plus, but a positive attitude and teamwork are essential.</li>
-                <li><strong>Classes/Specs Needed:</strong> Open to all exceptional players.</li>
-            </ul>
-        </div>
+    <!-- Raid Schedule Section -->
+    <section id="schedule">
+        <h2>Raid Schedule</h2>
+        <ul>
+            <li><strong>Main Progression Raids:</strong> Tuesday and Thursday, 9 PM–12 AM EST</li>
+            <li><strong>Alt Raid/Secondary Team:</strong> Saturday, 9 PM–12 AM EST</li>
+        </ul>
     </section>
 
-    <!-- Events Section -->
-    <section id="events">
-        <div class="container">
-            <h2>Upcoming Events</h2>
-            <p>Join us for weekly raids, Mythic+ dungeons, and other fun activities. Check out our guild’s calendar for more details.</p>
-        </div>
+    <!-- What We Offer Section -->
+    <section id="offer">
+        <h2>What We Offer</h2>
+        <ul>
+            <li><strong>Consistent Progression:</strong> A steady, focused approach to Heroic and Mythic content with an emphasis on teamwork.</li>
+            <li><strong>Active Guild:</strong> Weekly events, including raids, Mythic+, and occasional PvP activities.</li>
+            <li><strong>Supportive Environment:</strong> Friendly leadership and a welcoming space for all playstyles.</li>
+            <li><strong>Alt/Secondary Raids:</strong> A chance to gear alts or participate in organized runs.</li>
+        </ul>
     </section>
 
-    <!-- Contact Us Section -->
+    <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or want to join us, feel free to reach out!</p>
-            <form id="contact-form" onsubmit="return validateForm()">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
-                
-                <p id="error-message"></p>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+        <h2>How to Join</h2>
+        <p>If you’re interested in joining, contact us:</p>
+        <ul>
+            <li><strong>Battle.net:</strong> Morph#11503</li>
+            <li><strong>Discord:</strong> Morph#6932</li>
+        </ul>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Links Section -->
+    <section id="links">
+        <h2>Discover More About Us</h2>
+        <ul>
+            <li><a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">RAIDER.IO</a></li>
+            <li><a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WARCRAFT LOGS</a></li>
+            <li><a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">WOW ARMORY</a></li>
+            <li><a href="https://xmorphologyx.github.io/skilled-guild-website/" target="_blank">SKILLED GUILD WEBSITE</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 <span class="guild-name">Skilled</span>. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 <span>Skilled</span>. All rights reserved.</p>
     </footer>
 </body>
 </html>

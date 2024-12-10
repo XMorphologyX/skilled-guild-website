@@ -13,6 +13,10 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth; /* Enable smooth scrolling */
+            background-image: url('background-image.png'); /* Your background image here */
+            background-attachment: fixed; /* Make background stay fixed while scrolling */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background */
         }
 
         a {
@@ -26,10 +30,12 @@
 
         /* Header */
         header {
-            background-color: #2f3136;
+            background-color: rgba(47, 49, 54, 0.8); /* Slight transparency for background */
             text-align: center;
             padding: 20px 0;
             color: #f7d358;
+            position: relative;
+            z-index: 2;
         }
 
         header h1 {
@@ -37,7 +43,7 @@
         }
 
         header h1 span {
-            color: #ffeb8c; /* Highlighted guild name */
+            color: #ff5733; /* Updated color for SKILLED */
         }
 
         nav {
@@ -72,6 +78,7 @@
         section {
             padding: 40px 20px;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for sections */
         }
 
         section h2 {
@@ -230,17 +237,11 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-
-        // Example: Show a greeting when the page loads
-        window.onload = function() {
-            alert("Welcome to Skilled Guild's website!");
-        };
     </script>
 </body>
 </html>

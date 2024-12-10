@@ -28,48 +28,26 @@
             color: #ffeb8c;
         }
 
-        /* Header Section */
+        /* Header */
         header {
-            background-image: url('header-banner.jpg'); /* Banner background image */
-            background-size: cover;
-            background-position: center;
-            padding: 40px 0;
+            background-color: rgba(47, 49, 54, 0.8); /* Slight transparency for background */
             text-align: center;
+            padding: 20px 0;
+            color: #f7d358;
             position: relative;
+            z-index: 2;
         }
 
         header h1 {
-            font-size: 3rem;
-            color: #f7d358;
-            margin: 0;
-            position: relative;
+            font-size: 2.5rem;
         }
 
         header h1 span {
             color: #ff5733; /* Updated color for SKILLED */
         }
 
-        /* Add Guild Icons (Horde) */
-        header h1::before, header h1::after {
-            content: url('horde-icon.png'); /* Replace with actual icon image */
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px; /* Icon size */
-            height: 50px; /* Icon size */
-        }
-
-        header h1::before {
-            left: -60px; /* Move left icon to the left of the word */
-        }
-
-        header h1::after {
-            right: -60px; /* Move right icon to the right of the word */
-        }
-
-        /* Navigation Styles */
         nav {
-            margin-top: 20px;
+            margin: 20px 0;
         }
 
         nav ul {
@@ -249,12 +227,14 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Skilled Guild. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+            <p>&copy; 2025 <span class="guild-name">Skilled</span>. All rights reserved.</p>
+            <p><a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">RAIDER.IO</a> | <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">Warcraft Logs</a> | <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">WoW Armory</a></p>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('a').forEach(anchor => {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({

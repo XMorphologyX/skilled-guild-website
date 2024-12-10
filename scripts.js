@@ -1,26 +1,13 @@
-// scripts.js
-
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('nav ul');
-
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 });
-
-// Form validation
-function validateForm() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const errorMessage = document.getElementById('error-message');
-
-    if (!name || !email || !message) {
-        errorMessage.textContent = 'Please fill out all fields.';
-        return false;
-    }
-
-    errorMessage.textContent = ''; // Clear errors if valid
-    alert('Your message has been sent successfully!');
-    return true;
-}

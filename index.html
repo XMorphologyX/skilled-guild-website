@@ -36,14 +36,14 @@
     position: relative;
     z-index: 2;
 
-    /* Add the banner image */
+    /* Remove contain and use cover to ensure the image covers the entire header */
     background-image: url('header-banner-imagee.png'); /* Replace with your image path */
-    background-size: contain; /* Fit the entire image */
+    background-size: cover; /* Ensure the image covers the entire header */
     background-repeat: no-repeat; /* Prevent image tiling */
-    background-position: right; /* Position the image in the header */
+    background-position: center; /* Center the image in the header */
 }
 
-        /* Import Google Fonts */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
 
 /* Header Text Styling */

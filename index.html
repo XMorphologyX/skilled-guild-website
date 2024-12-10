@@ -66,32 +66,39 @@ header h1 span {
 }
 
         nav {
-            margin: 20px 0;
-        }
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    margin: 20px 0;
+    padding: 10px 0; /* Add padding for better spacing */
+    border-radius: 8px; /* Rounded corners for a clean look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-        nav ul li {
-            display: inline;
-        }
+nav ul li {
+    display: inline;
+}
 
-        nav ul li a {
-            color: #f4f4f4;
-            font-size: 1.2rem;
-            padding: 5px 10px;
-        }
+nav ul li a {
+    color: #f4f4f4; /* Light color for contrast */
+    font-size: 1.2rem;
+    padding: 10px 15px; /* Add padding for better clickability */
+    border: 1px solid transparent; /* Default border for cleaner hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 
-        nav ul li a:hover {
-            background-color: #f7d358;
-            color: #1c1c1c;
-            border-radius: 5px;
-        }
+nav ul li a:hover {
+    background-color: #f7d358; /* Gold hover background */
+    color: #1c1c1c; /* Dark text for contrast on hover */
+    border-color: #f7d358; /* Add a border matching the hover color */
+    border-radius: 5px;
+}
 
         /* Section Styles */
         section {

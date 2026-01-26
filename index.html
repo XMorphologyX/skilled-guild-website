@@ -8,106 +8,89 @@
         /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1c1c1c; /* Dark background */
-            color: #f4f4f4; /* Light text */
+            background-color: #1c1c1c;
+            color: #f4f4f4;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
-            background-image: url('background-image.png'); /* Your background image here */
-            background-attachment: fixed; /* Make background stay fixed while scrolling */
-            background-size: cover; /* Cover the entire page */
-            background-position: center; /* Center the background */
+            scroll-behavior: smooth;
+            background-image: url('background-image.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
         }
 
-        a {
-            color: #f7d358; /* Gold highlight for links */
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffeb8c;
-        }
+        a { color: #f7d358; text-decoration: none; }
+        a:hover { color: #ffeb8c; }
 
         header {
-    background-color: rgba(47, 49, 54, 0.8); /* Slight transparency */
-    text-align: center;
-    padding: 20px 0;
-    color: #f7d358;
-    position: relative;
-    z-index: 2;
+            background-color: rgba(47, 49, 54, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            color: #f7d358;
+            position: relative;
+            z-index: 2;
+            background-image: url('header-banner-imagee.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-    /* Remove contain and use cover to ensure the image covers the entire header */
-    background-image: url('header-banner-imagee.png'); /* Replace with your image path */
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-repeat: no-repeat; /* Prevent image tiling */
-    background-position: center; /* Center the image in the header */
-}
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
+        header h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 3rem;
+            color: #f7d358;
+            display: inline-block;
+            padding: 15px 25px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 215, 88, 0.8);
+        }
 
-/* Header Text Styling */
-header h1 {
-    font-family: 'Anton', sans-serif; /* Bold, impactful font */
-    font-size: 3rem; /* Large text size */
-    color: #f7d358; /* Gold text color */
-    display: inline-block; /* Ensure styling wraps around the text */
-    padding: 15px 25px; /* Add padding for better balance */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 215, 88, 0.8); /* Bold shadow effect */
-}
-
-header h1 span {
-    font-family: 'Oswald', sans-serif; /* Complementary font for the highlight */
-    color: #ff5733; /* Vibrant orange-red for emphasis */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 87, 51, 0.8); /* Distinct shadow for the highlighted word */
-}
+        header h1 span {
+            font-family: 'Oswald', sans-serif;
+            color: #ff5733;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 87, 51, 0.8);
+        }
 
         nav {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    margin: 20px 0;
-    padding: 10px 0; /* Add padding for better spacing */
-    border-radius: 8px; /* Rounded corners for a clean look */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 20px 0;
+            padding: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-nav ul li {
-    display: inline;
-}
+        nav ul li a {
+            color: #f4f4f4;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
 
-nav ul li a {
-    color: #f4f4f4; /* Light color for contrast */
-    font-size: 1.2rem;
-    padding: 10px 15px; /* Add padding for better clickability */
-    border: 1px solid transparent; /* Default border for cleaner hover effect */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
+        nav ul li a:hover {
+            background-color: #f7d358;
+            color: #1c1c1c;
+            border-color: #f7d358;
+            border-radius: 5px;
+        }
 
-nav ul li a:hover {
-    background-color: #f7d358; /* Gold hover background */
-    color: #1c1c1c; /* Dark text for contrast on hover */
-    border-color: #f7d358; /* Add a border matching the hover color */
-    border-radius: 5px;
-}
-
-        /* Section Styles */
         section {
             padding: 40px 20px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for sections */
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
-        section h2 {
-            color: #f7d358;
-            margin-bottom: 20px;
-        }
+        section h2 { color: #f7d358; margin-bottom: 20px; }
 
         section ul {
             list-style: none;
@@ -116,11 +99,6 @@ nav ul li a:hover {
             line-height: 1.8;
         }
 
-        section ul li {
-            margin: 10px 0;
-        }
-
-        /* Button Styles */
         .discord-button {
             display: inline-block;
             background-color: #7289da;
@@ -128,8 +106,7 @@ nav ul li a:hover {
             font-size: 1.2rem;
             padding: 10px 20px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-align: center;
+            transition: 0.3s ease;
             margin-top: 20px;
         }
 
@@ -138,7 +115,6 @@ nav ul li a:hover {
             transform: scale(1.05);
         }
 
-        /* Image Hover Animation */
         .expansion-image img {
             max-width: 100%;
             height: auto;
@@ -150,47 +126,31 @@ nav ul li a:hover {
             transform: scale(1.05);
         }
 
-        /* Schedule Container Styles */
-.schedule-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px auto;
-    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
-}
+        .schedule-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
 
-/* Individual Schedule Items */
-.schedule-item {
-    background-color: rgba(47, 49, 54, 0.9); /* Dark, semi-transparent container */
-    color: #f7d358; /* Gold text color */
-    padding: 15px 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 100%; /* Full width for smaller screens */
-    max-width: 300px; /* Limit width on larger screens */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border: 1px solid rgba(255, 215, 88, 0.5); /* Thin gold border for definition */
-}
+        .schedule-item {
+            background-color: rgba(47, 49, 54, 0.9);
+            color: #f7d358;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 320px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease;
+            border: 1px solid rgba(255, 215, 88, 0.5);
+        }
 
-.schedule-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #ffeb8c; /* Lighter gold for headings */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
-}
+        .schedule-item:hover {
+            transform: scale(1.05);
+            background-color: rgba(56, 58, 64, 1);
+        }
 
-.schedule-item p {
-    margin: 5px 0;
-    font-size: 1.1rem;
-}
-
-.schedule-item:hover {
-    transform: scale(1.05);
-    background-color: rgba(56, 58, 64, 1); /* Slightly brighter background on hover */
-}
-
-        /* Footer */
         footer {
             text-align: center;
             padding: 20px 0;
@@ -198,127 +158,143 @@ nav ul li a:hover {
             color: #f4f4f4;
         }
 
-        footer a {
-            margin: 0 10px;
-        }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Join <span>&lt;Skilled&gt;</span> – Heroic & Mythic Raiding Recruitment</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#schedule">Raid Schedule</a></li>
-                <li><a href="#offer">What We Offer</a></li>
-                <li><a href="#contact">How to Join</a></li>
-                <li><a href="#links">Discover More</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>The War Within: Join Skilled for Epic Progression</h2>
-            <p><span class="guild-name">Skilled</span> is actively recruiting dedicated players to join our community and conquer the challenges of the new <b>War Within</b> expansion. Whether you're focused on high-level progression, enjoy Mythic+ dungeons, or want to be part of a driven guild, we welcome all who are eager to take on Azeroth's greatest challenges.</p>
-            <div class="expansion-image">
-                <img src="raid-night.png" alt="Raid Night" />
-            </div>
+<header>
+    <h1>Join <span>&lt;Skilled&gt;</span> – Heroic & Mythic Raiding Recruitment</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#progress">Progression</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#offer">What We Offer</a></li>
+            <li><a href="#contact">Join</a></li>
+            <li><a href="#links">Links</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>The War Within: A Guild Built for Progression</h2>
+    <p>
+        <b>Skilled</b> is a semi-hardcore Mythic raiding guild on Mal'Ganis focused on building a stable,
+        long-term Cutting Edge roster. We raid with purpose, value preparation and consistency,
+        and aim to create a roster that progresses together instead of cycling players every tier.
+    </p>
+    <div class="expansion-image">
+        <img src="raid-night.png" alt="Raid Night" />
+    </div>
+</section>
+
+<section id="progress">
+    <h2>Progression History</h2>
+    <div class="schedule-container">
+        <div class="schedule-item">
+            <h3>Season 1</h3>
+            <p>AOTC + Early Mythic Progression</p>
         </div>
-    </section>
+        <div class="schedule-item">
+            <h3>Season 2</h3>
+            <p>5 / 8 Mythic</p>
+        </div>
+        <div class="schedule-item">
+            <h3>Season 3</h3>
+            <p>6 / 8 Mythic</p>
+        </div>
+    </div>
+    <p>
+        We are currently rebuilding our core roster with the explicit goal of returning to deep Mythic progression
+        and pushing for Cutting Edge in upcoming tiers.
+    </p>
+</section>
 
-    <!-- Raid Schedule Section -->
+<section id="vision">
+    <h2>Guild Vision & Recruitment Philosophy</h2>
+    <p>
+        Skilled is not a tourist guild, not a seasonal guild, and not a carry guild.
+        We are building a long-term roster of players who value consistency, accountability, and steady improvement.
+    </p>
+    <ul>
+        <li>✔ We recruit players, not parses</li>
+        <li>✔ We value preparation, mindset, and teamwork</li>
+        <li>✔ We expect raiders to show up, improve, and commit</li>
+        <li>✔ We are building toward Cutting Edge, not just farming Heroic</li>
+    </ul>
+    <p>
+        If you want to be part of a stable core and help build something strong instead of just consuming kills,
+        you will fit in here.
+    </p>
+</section>
+
 <section id="schedule">
     <h2>Raid Schedule</h2>
     <div class="schedule-container">
         <div class="schedule-item">
-            <h3>Main Progression Raids</h3>
-            <p>Tuesday and Thursday</p>
-            <p>8-11 PM CST</p>
+            <h3>Main Progression</h3>
+            <p>Tuesday & Thursday</p>
+            <p>8–11 PM CST</p>
         </div>
         <div class="schedule-item">
-            <h3>Alt Raid/Secondary Team</h3>
+            <h3>Alt / Optional Raid</h3>
             <p>Saturday</p>
             <p>8–11 PM CST</p>
         </div>
     </div>
 </section>
 
-    <!-- What We Offer Section -->
-    <section id="offer">
-        <h2>What We Offer</h2>
-        <ul>
-            <li><strong>Consistent Progression:</strong> A steady, focused approach to Heroic and Mythic content with an emphasis on teamwork.</li>
-            <li><strong>Active Guild:</strong> Weekly events, including raids, Mythic+, and occasional PvP activities.</li>
-            <li><strong>Supportive Environment:</strong> Friendly leadership and a welcoming space for all playstyles.</li>
-            <li><strong>Alt/Secondary Raids:</strong> A chance to gear alts or participate in organized runs.</li>
-        </ul>
-    </section>
+<section id="offer">
+    <h2>What We Offer</h2>
+    <ul>
+        <li><strong>Focused Mythic Progression</strong></li>
+        <li><strong>Stable leadership and direction</strong></li>
+        <li><strong>Organized raid environment</strong></li>
+        <li><strong>Optional alt/content nights</strong></li>
+    </ul>
+</section>
 
-  <!-- Contact Section -->
 <section id="contact">
     <h2>How to Join</h2>
-    <p>Interested in becoming a part of <span class="guild-name">Skilled</span>? Reach out to us via the platforms below for more information or to apply:</p>
     <div class="schedule-container">
         <div class="schedule-item">
             <h3>Battle.net</h3>
-            <p><strong>Morph#11503</strong></p>
+            <p>Morph#11503</p>
         </div>
         <div class="schedule-item">
             <h3>Discord</h3>
-            <p><strong>Morph#6932</strong></p>
+            <p>Morph#6932</p>
         </div>
     </div>
 </section>
 
-    <!-- Discover More Section -->
-    <section id="links">
-        <div class="container">
-            <h2>Discover More About Us</h2>
-            <p>
-                Be part of our action-packed weekly activities, including progression raids, Mythic+ dungeons, and special guild events. Explore our calendar for detailed schedules and stay informed about the latest updates.
-            </p>
-            <p>
-                <strong>Connect with our community on Discord for real-time updates, event coordination, and to engage with fellow members:</strong>
-            </p>
-            <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button" aria-label="Join our Discord">
-                Join Our Discord
-            </a>
-        </div>
-    </section>
+<section id="links">
+    <h2>Join Our Community</h2>
+    <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button">Join Our Discord</a>
+</section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 <span class="guild-name">Skilled</span>. All rights reserved.</p>
-            <p><a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> | <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">RAIDER.IO</a> | <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">Warcraft Logs</a> | <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">WoW Armory</a></p>
-        </div>
-    </footer>
+<footer>
+    <p>&copy; 2025 Skilled</p>
+    <p>
+        <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
+        <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
+        <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">Armory</a>
+    </p>
+</footer>
 
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>

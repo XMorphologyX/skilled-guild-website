@@ -33,12 +33,11 @@
         header h1 {
             font-family: 'Anton', sans-serif;
             font-size: clamp(2.4rem, 6vw, 4.2rem);
-            text-shadow: 0 0 25px #000, 4px 4px 0 #000,
-                         0 0 15px rgba(247, 211, 88, 0.8);
+            text-shadow: 0 0 25px #000, 4px 4px 0 #000, 0 0 15px rgba(247,211,88,0.8);
             letter-spacing: 3px;
             display: inline-block;
             padding: 15px 30px;
-            background: rgba(30, 30, 35, 0.75);
+            background: rgba(30,30,35,0.75);
             border-radius: 8px;
             border: 2px solid rgba(247,211,88,0.6);
         }
@@ -82,7 +81,7 @@
             padding: 80px 20px;
             max-width: 1100px;
             margin: 0 auto;
-            background: rgba(12, 12, 12, 0.72);   /* 50% lighter overlay */
+            background: rgba(12,12,12,0.72);
             text-align: center;
         }
 
@@ -104,7 +103,7 @@
         }
 
         .schedule-item {
-            background: rgba(40, 42, 48, 0.95);
+            background: rgba(40,42,48,0.95);
             border: 2px solid rgba(247,211,88,0.45);
             border-radius: 12px;
             padding: 28px 20px;
@@ -115,6 +114,7 @@
         .schedule-item:hover {
             transform: scale(1.07);
             border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(247,211,88,0.25);
         }
 
         .schedule-item h3 {
@@ -132,6 +132,13 @@
             width: 100%;
             border-radius: 12px;
             border: 3px solid rgba(247,211,88,0.4);
+            transition: all 0.4s ease;
+        }
+
+        .expansion-image img:hover {
+            transform: scale(1.04);
+            border-color: var(--gold);
+            box-shadow: 0 0 30px rgba(247,211,88,0.6);
         }
 
         .contact-grid {
@@ -143,12 +150,18 @@
         }
 
         .contact-card {
-            background: rgba(30, 30, 35, 0.95);
+            background: rgba(30,30,35,0.95);
             border: 2px solid var(--orange);
             border-radius: 12px;
             padding: 30px 40px;
             width: 290px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
         }
 
         .contact-card h3 {
@@ -173,11 +186,13 @@
             border-radius: 8px;
             margin-top: 30px;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .discord-button:hover {
             background: #5b6eae;
-            transform: scale(1.1);
+            transform: scale(1.12);
+            box-shadow: 0 0 35px #7289da;
         }
 
         footer {
@@ -189,7 +204,7 @@
 
         @media (max-width: 768px) {
             section { padding: 60px 15px; }
-            header h1 { padding: 12px 20px; font-size: 2.6rem; }
+            header h1 { padding: 12px 20px; }
         }
     </style>
 </head>
@@ -211,28 +226,50 @@
     </header>
 
     <section id="about">
-        <h2>The War Within – Midnight Season</h2>
+        <h2>Midnight Tier 1 – Voidspire / Dreamrift</h2>
         <p style="max-width:820px; margin:0 auto 30px; font-size:1.1rem;">
-            <strong>Skilled</strong> is a semi-hardcore Mythic raiding guild on Mal'Ganis building a stable Cutting Edge roster that actually stays together.
+            <strong>Skilled</strong> is a 3-day semi-hardcore Mythic raiding guild on Mal'Ganis focused on stable, consistent progression and building a long-term Cutting Edge roster. We raid with purpose, expect preparation, and want players who stay for the long haul.
         </p>
         <div class="expansion-image">
-            <img src="raid-night.png" alt="Raid Night">
+            <img src="raid-night.png" alt="Midnight Raid Night">
         </div>
     </section>
 
     <section id="progress">
-        <h2>Progression History</h2>
+        <h2>Midnight Tier 1 Progression</h2>
         <div class="schedule-container">
-            <div class="schedule-item"><h3>Season 1</h3><p>AOTC + Early Mythic</p></div>
-            <div class="schedule-item"><h3>Season 2</h3><p>5/8 Mythic</p></div>
-            <div class="schedule-item"><h3>Season 3</h3><p>6/8 Mythic</p></div>
+            <div class="schedule-item">
+                <h3>Mythic</h3>
+                <p><strong>2/9</strong></p>
+                <p>Chimaerus the Undreamt God<br>Vorasius</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Heroic</h3>
+                <p><strong>7/9</strong></p>
+            </div>
+            <div class="schedule-item">
+                <h3>Normal</h3>
+                <p><strong>9/9</strong></p>
+            </div>
         </div>
+        <p style="max-width:800px; margin:30px auto 0; font-size:1.05rem;">
+            We are actively pushing deeper into Mythic while rebuilding our core roster for full Cutting Edge in upcoming tiers.
+        </p>
     </section>
 
     <section id="vision">
-        <h2>Guild Vision</h2>
-        <p style="max-width:780px; margin:0 auto; font-size:1.1rem;">
-            We recruit players, not parses. Long-term roster. Real progression. No tourists. No carries.
+        <h2>Guild Vision & Recruitment</h2>
+        <p style="max-width:780px; margin:0 auto 25px; font-size:1.1rem;">
+            Skilled is not a tourist guild, not a seasonal carry, not a learning guild. We build long-term raiders who value consistency, accountability, and clean execution.
+        </p>
+        <ul style="max-width:720px; margin:0 auto; text-align:left; font-size:1.1rem; line-height:2;">
+            <li>✔ We recruit players, not parses</li>
+            <li>✔ Preparation, mindset, and teamwork matter</li>
+            <li>✔ Show up, improve, and commit</li>
+            <li>✔ Aiming for Cutting Edge, not just heroic clears</li>
+        </ul>
+        <p style="max-width:780px; margin:25px auto 0;">
+            Priority on <strong>Ranged DPS</strong> and <strong>Healers</strong>, but exceptional players of any role are welcome.
         </p>
     </section>
 
@@ -263,22 +300,23 @@
             <p>Focused Mythic progression with experienced leadership</p>
             <p>Organized, drama-free raid environment</p>
             <p>Stable core roster that actually stays together</p>
-            <p>Optional alt nights and strong community outside raid</p>
+            <p>Active guild outside of raid with optional alt nights</p>
         </div>
     </section>
 
     <section id="contact">
-        <h2>How to Join</h2>
+        <h2>How to Join / Apply</h2>
         <div class="contact-grid">
             <div class="contact-card">
                 <h3>Battle.net</h3>
-                <p style="font-size:1.5rem; margin-top:12px; color:var(--gold);"><strong>Morph#11503</strong></p>
+                <p style="font-size:1.55rem; margin-top:12px; color:var(--gold);"><strong>Morph#11503</strong></p>
             </div>
             <div class="contact-card">
                 <h3>Discord</h3>
-                <p style="font-size:1.5rem; margin-top:12px; color:var(--gold);"><strong>Morph#6932</strong></p>
+                <p style="font-size:1.55rem; margin-top:12px; color:var(--gold);"><strong>Morph#6932</strong></p>
             </div>
         </div>
+        <p style="margin-top:20px; font-size:1.05rem;">Message either for a chat — we reply fast.</p>
     </section>
 
     <section id="links">

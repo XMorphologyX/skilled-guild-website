@@ -8,34 +8,49 @@
 <style>
 body {
     font-family: 'Arial', sans-serif;
+    color: #f4f4f4;
     margin: 0;
-    color: #fff;
+    padding: 0;
+    scroll-behavior: smooth;
 
-    /* ✅ PURE BACKGROUND (NO OVERLAY) */
+    /* CLEAN BACKGROUND (NO OVERLAY) */
     background-image: url('midnight-bg.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
-/* Links */
+/* LINKS */
 a { color: #f7d358; text-decoration: none; }
 a:hover { color: #ffeb8c; }
 
-/* Header */
+/* HEADER */
 header {
     text-align: center;
-    padding: 30px 0;
-    background: rgba(0,0,0,0.6);
+    padding: 20px 0;
+    color: #f7d358;
+    background-image: url('header-banner-imagee.png');
+    background-size: cover;
+    background-position: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
 
 header h1 {
+    font-family: 'Anton', sans-serif;
     font-size: 3rem;
-    color: #f7d358;
-    text-shadow: 0 0 10px #000;
+    text-shadow: 0 0 15px rgba(0,0,0,0.9);
 }
 
-/* Nav */
+header h1 span {
+    color: #ff5733;
+}
+
+/* NAV */
+nav {
+    margin-top: 15px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -44,47 +59,40 @@ nav ul {
     padding: 0;
 }
 
-nav a {
-    padding: 10px 15px;
-    border-radius: 6px;
+nav ul li a {
+    padding: 8px 14px;
+    border-radius: 5px;
 }
 
-nav a:hover {
+nav ul li a:hover {
     background: #f7d358;
     color: #000;
 }
 
-/* ✅ GLASS PANEL (THIS IS THE MAGIC) */
-.section-box {
+/* SECTIONS */
+section {
     max-width: 900px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 25px;
+    border-radius: 10px;
 
-    background: rgba(255,255,255,0.08); /* light transparent */
+    /* LIGHT GLASS EFFECT (NOT DARK) */
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
-    border-radius: 12px;
-
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    text-align: center;
 }
 
 h2 {
     color: #f7d358;
-    text-align: center;
-    text-shadow: 0 0 8px #000;
 }
 
-p, li {
-    text-shadow: 0 0 6px #000;
-}
-
-/* Image */
+/* IMAGE */
 .expansion-image img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
-/* Schedule */
+/* SCHEDULE */
 .schedule-container {
     display: flex;
     justify-content: center;
@@ -93,38 +101,18 @@ p, li {
 }
 
 .schedule-item {
-    background: rgba(0,0,0,0.7);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #f7d358;
+    background: rgba(0,0,0,0.75);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,215,88,0.4);
     min-width: 200px;
-    text-align: center;
-    transition: 0.3s;
 }
 
-.schedule-item:hover {
-    transform: scale(1.05);
-}
-
-/* Button */
-.discord-button {
-    display: inline-block;
-    background: #7289da;
-    padding: 12px 20px;
-    border-radius: 6px;
-    margin-top: 20px;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0,0,0,0.7);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    header h1 { font-size: 2rem; }
+    background: rgba(0,0,0,0.6);
 }
 </style>
 </head>
@@ -132,68 +120,110 @@ footer {
 <body>
 
 <header>
-    <h1>Join &lt;Skilled&gt; – Mythic Progression</h1>
+    <h1>Join <span>&lt;Skilled&gt;</span> – Mythic Progression</h1>
+
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#progress">Progression</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#vision">Philosophy</a></li>
             <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#offer">Offer</a></li>
             <li><a href="#contact">Join</a></li>
+            <li><a href="#links">Links</a></li>
         </ul>
     </nav>
 </header>
 
-<div class="section-box" id="about">
+<section id="about">
     <h2>Midnight Season 1</h2>
     <p>
-        <b>Skilled</b> is a 3-day semi-hardcore Mythic guild focused on building a
-        stable Cutting Edge roster through consistency and execution.
+        <b>Skilled</b> is a 3-day semi-hardcore Mythic guild focused on building a stable,
+        long-term Cutting Edge roster.
     </p>
 
-    <!-- ✅ YOUR IMAGE RESTORED -->
     <div class="expansion-image">
         <img src="raid-night.png" alt="Raid Night">
     </div>
-</div>
+</section>
 
-<div class="section-box" id="progress">
+<section id="focus">
     <h2>Current Focus</h2>
     <p>
         Progressing through Midnight Season 1 while rebuilding a strong,
         reliable Mythic core.
     </p>
-</div>
+</section>
 
-<div class="section-box" id="schedule">
+<section id="vision">
+    <h2>Guild Philosophy</h2>
+    <ul>
+        <li>Preparation and class knowledge are expected</li>
+        <li>Performance determines raid spots</li>
+        <li>Team success over individual ego</li>
+        <li>Focused on progression, not just clears</li>
+    </ul>
+</section>
+
+<section id="schedule">
     <h2>Raid Schedule</h2>
-
     <div class="schedule-container">
         <div class="schedule-item">
             <h3>Tuesday</h3>
-            <p>8:00 – 11:00 PM CST</p>
+            <p>8:00 PM – 11:00 PM CST</p>
         </div>
+
         <div class="schedule-item">
             <h3>Wednesday</h3>
-            <p>8:00 – 10:00 PM CST</p>
+            <p>8:00 PM – 10:00 PM CST</p>
         </div>
+
         <div class="schedule-item">
             <h3>Thursday</h3>
-            <p>8:00 – 11:00 PM CST</p>
+            <p>8:00 PM – 11:00 PM CST</p>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section-box" id="contact">
-    <h2>Join Us</h2>
+<section id="offer">
+    <h2>What We Offer</h2>
+    <ul>
+        <li>Structured Mythic progression</li>
+        <li>Stable leadership</li>
+        <li>Performance-based roster</li>
+        <li>Active guild outside raid</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>How to Join</h2>
     <p>Battle.net: Morph#11503</p>
     <p>Discord: Morph#6932</p>
+</section>
 
-    <a href="https://discord.gg/qzAyheAHGr" class="discord-button">Join Discord</a>
-</div>
+<section id="links">
+    <h2>Join Our Community</h2>
+    <a href="https://discord.gg/qzAyheAHGr" target="_blank">Join Discord</a>
+</section>
 
 <footer>
-    <p>© 2026 Skilled</p>
+    <p>&copy; 2026 Skilled</p>
+    <p>
+        <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
+        <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
+        <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
+        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">Armory</a>
+    </p>
 </footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
 
 </body>
 </html>

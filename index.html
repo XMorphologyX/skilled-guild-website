@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilled Guild – Mythic Progression</title>
+
     <style>
         /* General Styles */
         body {
@@ -13,9 +14,9 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-background-image: 
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-    url('midnight-bg.jpg');
+
+            /* ✅ NO OVERLAY */
+            background-image: url('midnight-bg.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -29,8 +30,6 @@ background-image:
             text-align: center;
             padding: 20px 0;
             color: #f7d358;
-            position: relative;
-            z-index: 2;
             background-image: url('header-banner-imagee.png');
             background-size: cover;
             background-repeat: no-repeat;
@@ -45,13 +44,12 @@ background-image:
             color: #f7d358;
             display: inline-block;
             padding: 15px 25px;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 215, 88, 0.8);
+            text-shadow: 0 0 10px rgba(0,0,0,0.9);
         }
 
         header h1 span {
             font-family: 'Oswald', sans-serif;
             color: #ff5733;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 87, 51, 0.8);
         }
 
         nav {
@@ -59,7 +57,6 @@ background-image:
             margin: 20px 0;
             padding: 10px 0;
             border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
@@ -75,30 +72,61 @@ background-image:
             color: #f4f4f4;
             font-size: 1.1rem;
             padding: 10px 15px;
-            border: 1px solid transparent;
             transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
             background-color: #f7d358;
             color: #1c1c1c;
-            border-color: #f7d358;
             border-radius: 5px;
         }
 
+        /* ✅ Slightly lighter so background shows through */
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.55);
         }
 
-        section h2 { color: #f7d358; margin-bottom: 20px; }
+        section h2 {
+            color: #f7d358;
+            margin-bottom: 20px;
+            text-shadow: 0 0 6px rgba(0,0,0,0.8);
+        }
+
+        section p, li {
+            text-shadow: 0 0 6px rgba(0,0,0,0.8);
+        }
 
         section ul {
             list-style: none;
             padding: 0;
             margin: 20px 0;
             line-height: 1.8;
+        }
+
+        .schedule-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        .schedule-item {
+            background-color: rgba(47, 49, 54, 0.9);
+            color: #f7d358;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+            border: 1px solid rgba(255, 215, 88, 0.5);
+        }
+
+        .schedule-item:hover {
+            transform: scale(1.05);
         }
 
         .discord-button {
@@ -117,47 +145,10 @@ background-image:
             transform: scale(1.05);
         }
 
-        .expansion-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .expansion-image img:hover {
-            transform: scale(1.05);
-        }
-
-        .schedule-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px auto;
-            flex-wrap: wrap;
-        }
-
-        .schedule-item {
-            background-color: rgba(47, 49, 54, 0.9);
-            color: #f7d358;
-            padding: 15px 20px;
-            border-radius: 8px;
-            text-align: center;
-            max-width: 320px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            transition: 0.3s ease;
-            border: 1px solid rgba(255, 215, 88, 0.5);
-        }
-
-        .schedule-item:hover {
-            transform: scale(1.05);
-            background-color: rgba(56, 58, 64, 1);
-        }
-
         footer {
             text-align: center;
             padding: 20px 0;
             background-color: #2f3136;
-            color: #f4f4f4;
         }
 
         @media (max-width: 768px) {
@@ -165,6 +156,7 @@ background-image:
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -185,27 +177,19 @@ background-image:
 <section id="about">
     <h2>Midnight Season 1 – A Guild Built for Progression</h2>
     <p>
-        <b>Skilled</b> is a <b>3-day semi-hardcore Mythic raiding guild</b> on Mal'Ganis focused on building a 
-        stable, long-term Cutting Edge–capable roster. We value preparation, consistency, and execution, 
-        and aim to progress as a team rather than cycling players each tier.
+        <b>Skilled</b> is a <b>3-day semi-hardcore Mythic raiding guild</b> focused on building a stable,
+        long-term Cutting Edge–capable roster.
     </p>
     <p>
-        We are active outside of raid and expect the same level of engagement from our members.
+        We value preparation, consistency, and execution and expect members to stay active outside of raid.
     </p>
-    <div class="expansion-image">
-        <img src="raid-night.png" alt="Raid Night" />
-    </div>
 </section>
 
 <section id="progress">
     <h2>Current Focus</h2>
     <p>
-        We are currently progressing through <b>Midnight Season 1</b> with a focus on building a 
-        stable core roster capable of consistent Mythic progression.
-    </p>
-    <p>
-        Our goal is to establish a strong foundation and push toward 
-        <b>Cutting Edge–level performance</b> as the tier develops.
+        Progressing through <b>Midnight Season 1</b> while building a strong core roster capable of
+        consistent Mythic progression.
     </p>
 </section>
 
@@ -219,24 +203,11 @@ background-image:
 
 <section id="vision">
     <h2>Guild Philosophy</h2>
-    <p>
-        Skilled is a long-term progression guild focused on consistency, accountability, and steady improvement.
-    </p>
     <ul>
         <li>✔ Preparation and class knowledge are expected</li>
-        <li>✔ Performance and consistency determine raid spots</li>
-        <li>✔ Team success comes before individual ego</li>
-        <li>✔ Focused on progression, not just clears</li>
-    </ul>
-</section>
-
-<section id="expectations">
-    <h2>Raider Expectations</h2>
-    <ul>
-        <li>✔ Come prepared (enchants, consumables, research)</li>
-        <li>✔ Consistent attendance and performance</li>
-        <li>✔ Ability to take feedback and improve</li>
-        <li>✔ Positive, team-focused mindset</li>
+        <li>✔ Performance determines raid spots</li>
+        <li>✔ Team success over ego</li>
+        <li>✔ Progression-focused mindset</li>
     </ul>
 </section>
 
@@ -246,17 +217,14 @@ background-image:
         <div class="schedule-item">
             <h3>Tuesday</h3>
             <p>8:00 PM – 11:00 PM CST</p>
-            <p>(3 hours)</p>
         </div>
         <div class="schedule-item">
             <h3>Wednesday</h3>
             <p>8:00 PM – 10:00 PM CST</p>
-            <p>(2 hours)</p>
         </div>
         <div class="schedule-item">
             <h3>Thursday</h3>
             <p>8:00 PM – 11:00 PM CST</p>
-            <p>(3 hours)</p>
         </div>
     </div>
 </section>
@@ -264,10 +232,10 @@ background-image:
 <section id="offer">
     <h2>What We Offer</h2>
     <ul>
-        <li><strong>Structured Mythic progression environment</strong></li>
-        <li><strong>Stable leadership and clear direction</strong></li>
-        <li><strong>Performance-based roster decisions</strong></li>
-        <li><strong>Active guild outside of raid (Mythic+, alt runs)</strong></li>
+        <li><strong>Structured Mythic progression</strong></li>
+        <li><strong>Stable leadership</strong></li>
+        <li><strong>Performance-based roster</strong></li>
+        <li><strong>Active guild environment</strong></li>
     </ul>
 </section>
 
@@ -292,12 +260,6 @@ background-image:
 
 <footer>
     <p>&copy; 2026 Skilled</p>
-    <p>
-        <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
-        <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
-        <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
-        <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">Armory</a>
-    </p>
 </footer>
 
 <script>

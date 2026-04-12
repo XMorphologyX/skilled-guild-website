@@ -24,7 +24,7 @@
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('header-banner-imagee.png') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('header-banner-imagee.png') center/cover no-repeat;
             text-align: center;
             padding: 90px 20px 60px;
             border-bottom: 5px solid var(--gold);
@@ -33,8 +33,14 @@
         header h1 {
             font-family: 'Anton', sans-serif;
             font-size: clamp(2.4rem, 6vw, 4.2rem);
-            text-shadow: 0 0 25px #000, 4px 4px 0 #000;
+            text-shadow: 0 0 25px #000, 4px 4px 0 #000,
+                         0 0 15px rgba(247, 211, 88, 0.8);
             letter-spacing: 3px;
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(30, 30, 35, 0.75);
+            border-radius: 8px;
+            border: 2px solid rgba(247,211,88,0.6);
         }
 
         header h1 span { color: var(--orange); }
@@ -76,7 +82,7 @@
             padding: 80px 20px;
             max-width: 1100px;
             margin: 0 auto;
-            background: rgba(12, 12, 12, 0.94);
+            background: rgba(12, 12, 12, 0.72);   /* 50% lighter overlay */
             text-align: center;
         }
 
@@ -85,6 +91,7 @@
             font-size: clamp(2.2rem, 5vw, 3rem);
             color: var(--gold);
             margin-bottom: 35px;
+            text-shadow: 0 0 15px rgba(0,0,0,0.8);
         }
 
         .schedule-container {
@@ -108,7 +115,6 @@
         .schedule-item:hover {
             transform: scale(1.07);
             border-color: var(--gold);
-            box-shadow: 0 15px 35px rgba(247,211,88,0.25);
         }
 
         .schedule-item h3 {
@@ -126,12 +132,6 @@
             width: 100%;
             border-radius: 12px;
             border: 3px solid rgba(247,211,88,0.4);
-            transition: all 0.4s;
-        }
-
-        .expansion-image img:hover {
-            transform: scale(1.04);
-            border-color: var(--gold);
         }
 
         .contact-grid {
@@ -144,16 +144,24 @@
 
         .contact-card {
             background: rgba(30, 30, 35, 0.95);
-            border: 2px solid #ff5733;
-            border-radius: 10px;
-            padding: 25px 40px;
-            width: 280px;
-            text-align: center;
+            border: 2px solid var(--orange);
+            border-radius: 12px;
+            padding: 30px 40px;
+            width: 290px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
 
         .contact-card h3 {
-            color: #ff5733;
-            font-size: 1.4rem;
+            color: var(--orange);
+            font-size: 1.45rem;
+        }
+
+        .offer-list {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.12rem;
+            line-height: 2.1;
         }
 
         .discord-button {
@@ -163,14 +171,13 @@
             font-size: 1.35rem;
             padding: 16px 40px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin-top: 30px;
             transition: all 0.3s ease;
         }
 
         .discord-button:hover {
             background: #5b6eae;
             transform: scale(1.1);
-            box-shadow: 0 0 30px #7289da;
         }
 
         footer {
@@ -182,6 +189,7 @@
 
         @media (max-width: 768px) {
             section { padding: 60px 15px; }
+            header h1 { padding: 12px 20px; font-size: 2.6rem; }
         }
     </style>
 </head>
@@ -204,7 +212,7 @@
 
     <section id="about">
         <h2>The War Within – Midnight Season</h2>
-        <p style="max-width:820px; margin:0 auto 30px;">
+        <p style="max-width:820px; margin:0 auto 30px; font-size:1.1rem;">
             <strong>Skilled</strong> is a semi-hardcore Mythic raiding guild on Mal'Ganis building a stable Cutting Edge roster that actually stays together.
         </p>
         <div class="expansion-image">
@@ -223,7 +231,7 @@
 
     <section id="vision">
         <h2>Guild Vision</h2>
-        <p style="max-width:780px; margin:0 auto;">
+        <p style="max-width:780px; margin:0 auto; font-size:1.1rem;">
             We recruit players, not parses. Long-term roster. Real progression. No tourists. No carries.
         </p>
     </section>
@@ -231,19 +239,32 @@
     <section id="schedule">
         <h2>Raid Schedule (CST)</h2>
         <div class="schedule-container">
-            <div class="schedule-item"><h3>Main Progression</h3><p>Tue & Thu — 8:00 – 11:00 PM</p></div>
-            <div class="schedule-item"><h3>Alt / Optional</h3><p>Saturday — 8:00 – 11:00 PM</p></div>
+            <div class="schedule-item">
+                <h3>Tuesday</h3>
+                <p>8:00 – 11:00 PM</p>
+                <p><strong>3 Hours</strong></p>
+            </div>
+            <div class="schedule-item">
+                <h3>Wednesday</h3>
+                <p>8:00 – 10:00 PM</p>
+                <p><strong>2 Hours</strong></p>
+            </div>
+            <div class="schedule-item">
+                <h3>Thursday</h3>
+                <p>8:00 – 11:00 PM</p>
+                <p><strong>3 Hours</strong></p>
+            </div>
         </div>
     </section>
 
     <section id="offer">
         <h2>What We Offer</h2>
-        <ul style="max-width:720px; margin:0 auto; text-align:left; font-size:1.1rem; line-height:2;">
-            <li>Focused Mythic progression with experienced leadership</li>
-            <li>Organized, drama-free raid environment</li>
-            <li>Stable core roster that actually stays together</li>
-            <li>Optional alt nights and strong community</li>
-        </ul>
+        <div class="offer-list">
+            <p>Focused Mythic progression with experienced leadership</p>
+            <p>Organized, drama-free raid environment</p>
+            <p>Stable core roster that actually stays together</p>
+            <p>Optional alt nights and strong community outside raid</p>
+        </div>
     </section>
 
     <section id="contact">
@@ -251,11 +272,11 @@
         <div class="contact-grid">
             <div class="contact-card">
                 <h3>Battle.net</h3>
-                <p style="font-size:1.4rem; margin-top:10px;"><strong>Morph#11503</strong></p>
+                <p style="font-size:1.5rem; margin-top:12px; color:var(--gold);"><strong>Morph#11503</strong></p>
             </div>
             <div class="contact-card">
                 <h3>Discord</h3>
-                <p style="font-size:1.4rem; margin-top:10px;"><strong>Morph#6932</strong></p>
+                <p style="font-size:1.5rem; margin-top:12px; color:var(--gold);"><strong>Morph#6932</strong></p>
             </div>
         </div>
     </section>

@@ -1,260 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skilled Guild – Heroic & Mythic Raiding</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilled Guild – Mythic Raiding | Mal'Ganis</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
 
-<style>
-body {
-    font-family: 'Arial', sans-serif;
-    color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+        :root {
+            --gold: #f7d358;
+            --orange: #ff5733;
+            --dark: #1c1c1c;
+        }
 
-    /* CLEAN background (NO DARK OVERLAY) */
-    background-image: url('midnight-bg.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-a { color: #f7d358; text-decoration: none; }
-a:hover { color: #ffeb8c; }
+        body {
+            font-family: 'Oswald', sans-serif;
+            color: #f4f4f4;
+            background: #0a0a0a;
+            background-image: url('midnight-bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
 
-header {
-    background-color: rgba(47, 49, 54, 0.85);
-    text-align: center;
-    padding: 20px 0;
-    color: #f7d358;
-    background-image: url('header-banner-imagee.png');
-    background-size: cover;
-    background-position: center;
-}
+        header {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('header-banner-imagee.png') center/cover no-repeat;
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom: 4px solid var(--gold);
+        }
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
+        header h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            text-shadow: 0 0 20px rgba(0,0,0,0.9), 3px 3px 0 #000;
+            letter-spacing: 2px;
+        }
 
-header h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 3rem;
-    padding: 15px 25px;
-    text-shadow: 4px 4px 8px rgba(0,0,0,0.9);
-}
+        header h1 span {
+            color: var(--orange);
+            text-shadow: 0 0 15px rgba(255,87,51,0.6);
+        }
 
-header h1 span {
-    font-family: 'Oswald', sans-serif;
-    color: #ff5733;
-}
+        nav {
+            background: rgba(0,0,0,0.85);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(247, 211, 88, 0.3);
+        }
 
-nav {
-    background-color: rgba(0,0,0,0.6);
-    margin: 20px auto;
-    padding: 10px 0;
-    border-radius: 8px;
-    width: fit-content;
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
+        nav ul li a {
+            color: #f4f4f4;
+            padding: 12px 22px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
 
-nav ul li a {
-    color: #f4f4f4;
-    padding: 10px 15px;
-}
+        nav ul li a:hover {
+            background: var(--gold);
+            color: #111;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247, 211, 88, 0.4);
+        }
 
-nav ul li a:hover {
-    background-color: #f7d358;
-    color: #1c1c1c;
-    border-radius: 5px;
-}
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.92);
+            border-bottom: 1px solid rgba(247, 211, 88, 0.15);
+        }
 
-/* LIGHTER SECTIONS (SO BG SHOWS THROUGH) */
-section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: rgba(0,0,0,0.45);
-}
+        h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.6rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 0 0 15px rgba(0,0,0,0.8);
+        }
 
-/* NEW OUTER CONTAINER (does NOT replace yours) */
-.section-wrapper {
-    max-width: 1100px;
-    margin: auto;
-}
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-.schedule-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .schedule-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
 
-.schedule-item {
-    background-color: rgba(47,49,54,0.9);
-    color: #f7d358;
-    padding: 15px 20px;
-    border-radius: 8px;
-    max-width: 260px;
-    border: 1px solid rgba(255,215,88,0.5);
-}
+        .schedule-item {
+            background: rgba(47, 49, 54, 0.95);
+            border: 2px solid rgba(247, 211, 88, 0.4);
+            border-radius: 10px;
+            padding: 25px 20px;
+            width: 280px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
 
-/* FIXED IMAGE SIZE */
-.expansion-image img {
-    max-width: 600px;
-    width: 100%;
-    border-radius: 8px;
-}
+        .schedule-item:hover {
+            transform: scale(1.06) translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 30px rgba(247, 211, 88, 0.25);
+        }
 
-.discord-button {
-    display: inline-block;
-    background-color: #7289da;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
+        .schedule-item h3 {
+            color: var(--orange);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2f3136;
-}
+        .expansion-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            border: 3px solid rgba(247, 211, 88, 0.3);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+        }
 
-</style>
+        .expansion-image img:hover {
+            transform: scale(1.03);
+            border-color: var(--gold);
+        }
+
+        .discord-button {
+            display: inline-block;
+            background: #7289da;
+            color: white;
+            font-size: 1.3rem;
+            padding: 16px 32px;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .discord-button:hover {
+            background: #5b6eae;
+            transform: scale(1.08);
+            box-shadow: 0 0 25px #7289da;
+        }
+
+        footer {
+            background: #111;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        footer a {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 60px 15px 40px; }
+            h2 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<h1>Join <span>&lt;Skilled&gt;</span> – Mythic Raiding</h1>
+    <header>
+        <h1>Join <span>&lt;Skilled&gt;</span> – Mythic Raiding</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#offer">What We Offer</a></li>
+                <li><a href="#contact">Join Us</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#vision">Vision</a></li>
-<li><a href="#schedule">Schedule</a></li>
-<li><a href="#offer">What We Offer</a></li>
-<li><a href="#contact">Join</a></li>
-<li><a href="#links">Links</a></li>
-</ul>
-</nav>
-</header>
+    <section id="about">
+        <div class="content">
+            <h2>The War Within – Midnight Season</h2>
+            <p><strong>Skilled</strong> is a semi-hardcore Mythic raiding guild on Mal'Ganis. We’re building a stable, long-term Cutting Edge roster that actually progresses instead of burning out every tier.</p>
+            
+            <div class="expansion-image" style="margin: 35px auto; max-width: 720px;">
+                <img src="raid-night.png" alt="Raid Night">
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-<div class="section-wrapper">
+    <section id="progress">
+        <h2>Progression History</h2>
+        <div class="schedule-container">
+            <div class="schedule-item">
+                <h3>Season 1</h3>
+                <p>AOTC + Early Mythic</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Season 2</h3>
+                <p>5/8 Mythic</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Season 3</h3>
+                <p>6/8 Mythic</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:30px; max-width:800px; margin-left:auto; margin-right:auto;">
+            We are currently rebuilding our core with players who want to push deep into Mythic again and fight for Cutting Edge.
+        </p>
+    </section>
 
-<h2>Midnight Season 1</h2>
+    <section id="vision">
+        <h2>Guild Vision</h2>
+        <div class="content">
+            <p>We are not a tourist guild. Not a seasonal carry guild. We recruit players, not just parses.</p>
+            <ul style="list-style:none; max-width:700px; margin:30px auto; font-size:1.1rem;">
+                <li>✔ Long-term roster stability</li>
+                <li>✔ Preparation and accountability</li>
+                <li>✔ Team-first mindset</li>
+                <li>✔ Real Mythic progression — not just heroic farming</li>
+            </ul>
+            <p>If you want to be part of something that actually lasts and pushes limits, you belong here.</p>
+        </div>
+    </section>
 
-<p>
-<b>Skilled</b> is a semi-hardcore Mythic raiding guild focused on building a
-stable Cutting Edge roster.
-</p>
+    <section id="schedule">
+        <h2>Raid Schedule (CST)</h2>
+        <div class="schedule-container">
+            <div class="schedule-item">
+                <h3>Main Progression</h3>
+                <p>Tue & Thu<br>8:00 – 11:00 PM</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Alt / Optional</h3>
+                <p>Saturday<br>8:00 – 11:00 PM</p>
+            </div>
+        </div>
+    </section>
 
-<div class="expansion-image">
-<img src="raid-night.png" alt="Raid Night">
-</div>
+    <section id="offer">
+        <h2>What We Offer</h2>
+        <div class="content">
+            <ul style="list-style:none; max-width:700px; margin:0 auto; font-size:1.15rem;">
+                <li>Focused Mythic progression with experienced leadership</li>
+                <li>Organized, drama-free raid environment</li>
+                <li>Stable core roster that actually stays together</li>
+                <li>Optional alt nights and strong community outside raid</li>
+            </ul>
+        </div>
+    </section>
 
-</div>
-</section>
+    <section id="contact">
+        <h2>How to Join</h2>
+        <div class="schedule-container">
+            <div class="schedule-item">
+                <h3>Battle.net</h3>
+                <p><strong>Morph#11503</strong></p>
+            </div>
+            <div class="schedule-item">
+                <h3>Discord</h3>
+                <p><strong>Morph#6932</strong></p>
+            </div>
+        </div>
+    </section>
 
-<section id="vision">
-<div class="section-wrapper">
+    <section id="links">
+        <h2>Join Our Community</h2>
+        <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button">Join Our Discord</a>
+    </section>
 
-<h2>Guild Vision</h2>
+    <footer>
+        <p>&copy; 2026 Skilled Guild – Mal'Ganis</p>
+        <p>
+            <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
+            <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
+            <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
+            <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">Armory</a>
+        </p>
+    </footer>
 
-<ul>
-<li>✔ Preparation and consistency</li>
-<li>✔ Performance-based roster</li>
-<li>✔ Team-first mindset</li>
-<li>✔ Focused Mythic progression</li>
-</ul>
-
-</div>
-</section>
-
-<section id="schedule">
-<div class="section-wrapper">
-
-<h2>Raid Schedule</h2>
-
-<div class="schedule-container">
-
-<div class="schedule-item">
-<h3>Tuesday</h3>
-<p>8–11 PM CST</p>
-<p>3 Hours</p>
-</div>
-
-<div class="schedule-item">
-<h3>Wednesday</h3>
-<p>8–10 PM CST</p>
-<p>2 Hours</p>
-</div>
-
-<div class="schedule-item">
-<h3>Thursday</h3>
-<p>8–11 PM CST</p>
-<p>3 Hours</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="offer">
-<div class="section-wrapper">
-
-<h2>What We Offer</h2>
-
-<ul>
-<li>Structured Mythic progression</li>
-<li>Stable leadership</li>
-<li>Organized raid environment</li>
-<li>Active guild outside raid</li>
-</ul>
-
-</div>
-</section>
-
-<section id="contact">
-<div class="section-wrapper">
-
-<h2>How to Join</h2>
-
-<div class="schedule-container">
-<div class="schedule-item">
-<h3>Battle.net</h3>
-<p>Morph#11503</p>
-</div>
-
-<div class="schedule-item">
-<h3>Discord</h3>
-<p>Morph#6932</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="links">
-<h2>Join Our Community</h2>
-<a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button">
-Join Our Discord
-</a>
-</section>
-
-<footer>
-<p>&copy; 2026 Skilled</p>
-<p>
-<a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled">WowProgress</a> |
-<a href="https://raider.io/guilds/us/malganis/Skilled">Raider.IO</a> |
-<a href="https://www.warcraftlogs.com/guild/id/370860">WarcraftLogs</a> |
-<a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled">Armory</a>
-</p>
-</footer>
-
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

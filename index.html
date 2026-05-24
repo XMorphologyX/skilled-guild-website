@@ -82,8 +82,9 @@
             padding: 80px 20px;
             max-width: 1100px;
             margin: 0 auto;
-            background: rgba(12,12,12,0.72);
+            background: rgba(12,12,12,0.85);
             text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         h2 {
@@ -94,37 +95,34 @@
             text-shadow: 0 0 15px rgba(0,0,0,0.8);
         }
 
-        .vision-content {
+        .content-block {
             max-width: 820px;
             margin: 0 auto;
+            text-align: left;
+        }
+
+        .content-block p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            line-height: 1.7;
             text-align: center;
         }
 
-        .vision-content p {
-            font-size: 1.12rem;
-            margin-bottom: 35px;
-            line-height: 1.7;
-        }
-
-        .vision-list {
+        .custom-list {
             list-style: none;
-            max-width: 680px;
+            max-width: 750px;
             margin: 0 auto 35px;
         }
 
-        .vision-list li {
+        .custom-list li {
             font-size: 1.15rem;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            padding: 12px 0;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(247,211,88,0.1);
         }
 
-        .vision-list li::before {
-            content: "✔";
-            color: var(--gold);
-            font-size: 1.4rem;
+        .custom-list li strong {
+            color: var(--orange);
         }
 
         .schedule-container {
@@ -169,12 +167,6 @@
             transition: all 0.4s ease;
         }
 
-        .expansion-image img:hover {
-            transform: scale(1.04);
-            border-color: var(--gold);
-            box-shadow: 0 0 30px rgba(247,211,88,0.6);
-        }
-
         .contact-grid {
             display: flex;
             justify-content: center;
@@ -187,59 +179,54 @@
             background: rgba(30,30,35,0.95);
             border: 2px solid var(--orange);
             border-radius: 12px;
-            padding: 30px 40px;
+            padding: 25px 40px;
             width: 290px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.6);
             transition: all 0.3s ease;
         }
 
-        .contact-card:hover {
-            transform: scale(1.05);
-            border-color: var(--gold);
-        }
-
         .contact-card h3 {
-            color: var(--orange);
+            color: var(--gold);
             font-size: 1.45rem;
+            margin-bottom: 10px;
         }
 
-        .offer-list {
-            max-width: 720px;
+        .link-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
-            font-size: 1.12rem;
-            line-height: 2.1;
-            list-style: none;
         }
 
-        .discord-button {
-            display: inline-block;
-            background: #7289da;
-            color: white;
-            font-size: 1.35rem;
-            padding: 16px 40px;
-            border-radius: 8px;
-            margin-top: 30px;
-            transition: all 0.3s ease;
+        .guild-link {
+            background: rgba(255,255,255,0.05);
+            color: #f4f4f4;
             text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1.05rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
         }
 
-        .discord-button:hover {
-            background: #5b6eae;
-            transform: scale(1.12);
-            box-shadow: 0 0 35px #7289da;
+        .guild-link:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: #fff;
+            transform: translateY(-2px);
         }
 
         footer {
             background: #0a0a0a;
-            padding: 35px 20px;
+            padding: 40px 20px;
             text-align: center;
             border-top: 3px solid var(--gold);
         }
 
         @media (max-width: 768px) {
             section { padding: 60px 15px; }
-            .vision-content { padding: 0 15px; }
         }
     </style>
 </head>
@@ -250,83 +237,78 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#vision">Vision</a></li>
+                <li><a href="#looking-for">What We're Looking For</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#offer">What We Offer</a></li>
-                <li><a href="#contact">Join Us</a></li>
+                <li><a href="#join">How to Join</a></li>
+                <li><a href="#links">Guild Links</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>Midnight Tier 1 – Voidspire / Dreamrift</h2>
-        <p style="max-width:820px; margin:0 auto 30px; font-size:1.1rem;">
-            <strong>Skilled</strong> is a 3-day semi-hardcore Mythic raiding guild on Mal'Ganis focused on stable, consistent progression and building a long-term Cutting Edge roster.
-        </p>
+        <h2>About &lt;Skilled&gt;</h2>
+        <div class="content-block">
+            <p>
+                <strong>Skilled</strong> is forming a stable, dedicated Mythic raid team and recruiting players who want consistent Cutting Edge progression on Mal’ganis [H].
+            </p>
+        </div>
         <div class="expansion-image">
             <img src="raid-night.png" alt="Midnight Raid Night">
         </div>
     </section>
 
-    <section id="vision">
-        <h2>Guild Vision & Recruitment</h2>
-        <div class="vision-content">
-            <p>We aim to maintain a competitive, adult raiding environment where efficiency and performance are highly valued, without sacrificing the fun of playing the game together.</p>
-            <ul class="vision-list">
-                <li>High performance and deep class knowledge</li>
-                <li>Consistent attendance and accountability</li>
-                <li>Constructive attitude during progression</li>
+    <section id="looking-for">
+        <h2>What We’re Looking For</h2>
+        <div class="content-block">
+            <p>Recruiting all strong applicants. Priority on <strong>Ranged DPS</strong> and <strong>Healers</strong>, but exceptional players of any role are welcome.</p>
+            <ul class="custom-list">
+                <li><strong>Mythic Raiders:</strong> Prepared and reliable players who know their class and study encounters ahead of time.</li>
+                <li><strong>Expectations:</strong> Consistency, commitment, and active participation outside raid nights. We want players who engage with the game—not just log in twice a week.</li>
             </ul>
         </div>
     </section>
 
     <section id="schedule">
         <h2>Raid Schedule</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;"><strong>Mythic Progression:</strong> Tuesday, Wednesday and Thursday</p>
         <div class="schedule-container">
             <div class="schedule-item">
-                <h3>Tuesday</h3>
-                <p><strong>8:00 PM – 11:00 PM</strong><br>Central Standard Time</p>
-            </div>
-            <div class="schedule-item">
-                <h3>Wednesday</h3>
-                <p><strong>8:00 PM – 11:00 PM</strong><br>Central Standard Time</p>
-            </div>
-            <div class="schedule-item">
-                <h3>Thursday</h3>
-                <p><strong>8:00 PM – 11:00 PM</strong><br>Central Standard Time</p>
+                <h3>Tues / Wed / Thurs</h3>
+                <p><strong>8:00 PM – 11:00 PM</strong><br>Central Standard Time (CST)</p>
             </div>
         </div>
     </section>
 
     <section id="offer">
         <h2>What We Offer</h2>
-        <ul class="offer-list">
-            <li>Guaranteed Flasks, Food, and Repairs for Raiders</li>
-            <li>An active Mythic+ community for off-nights</li>
-            <li>Fair, performance-based loot distribution</li>
-            <li>A toxic-free environment focused on killing bosses</li>
-        </ul>
+        <div class="content-block">
+            <ul class="custom-list">
+                <li><strong>Focused Mythic Environment:</strong> A structured, professional raid atmosphere aimed at long-term CE progression.</li>
+                <li><strong>Active Community:</strong> Weekly activities including Mythic+, alt nights, and casual guild events.</li>
+                <li><strong>Supportive Leadership:</strong> Clear communication, organized planning, and a culture built on mutual respect.</li>
+                <li><strong>Rebuilding With Purpose:</strong> We are strengthening our roster with long-term, dedicated players. No tourists. No seasonal raiders. No revolving-door slots.</li>
+            </ul>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Join Our Roster</h2>
-        <p>We are always looking for exceptional players to bolster our team.</p>
+    <section id="join">
+        <h2>How to Join</h2>
+        <div class="content-block">
+            <p>If you're a player who values consistent Mythic progression, professional raid standards, and long-term stability, Skilled may be the right home for you. Contact us directly:</p>
+        </div>
         <div class="contact-grid">
             <div class="contact-card">
-                <h3>Recruitment Officer</h3>
-                <p>Discord: officer_name</p>
+                <h3>Battle.net</h3>
+                <p>Morph#11503</p>
             </div>
             <div class="contact-card">
-                <h3>Guild Master</h3>
-                <p>Discord: gm_name</p>
+                <h3>Discord</h3>
+                <p>Morph#6932</p>
             </div>
         </div>
-        <a href="#" class="discord-button">Apply on Discord</a>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Skilled Guild – Mal'Ganis. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <section id="links">
+        <h2>Learn More About Skilled</h2>
+        <div class="link-grid">

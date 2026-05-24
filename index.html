@@ -69,7 +69,6 @@
             font-size: 1.15rem;
             transition: all 0.3s ease;
             border-radius: 6px;
-            text-decoration: none;
         }
 
         nav ul li a:hover {
@@ -249,6 +248,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#progress">Progress</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#offer">What We Offer</a></li>
@@ -268,32 +268,50 @@
         </div>
     </section>
 
+    <section id="progress">
+        <h2>Midnight Tier 1 Progression</h2>
+        <div class="schedule-container">
+            <div class="schedule-item"><h3>Mythic</h3><p><strong>2/9</strong><br>Chimaerus • Vorasius</p></div>
+            <div class="schedule-item"><h3>Heroic</h3><p><strong>7/9</strong></p></div>
+            <div class="schedule-item"><h3>Normal</h3><p><strong>9/9</strong></p></div>
+        </div>
+    </section>
+
     <section id="vision">
         <h2>Guild Vision & Recruitment</h2>
         <div class="vision-content">
-            <p>Skilled is not a tourist guild, not a seasonal carry, not a learning guild. We build long-term raiders who value consistency, accountability, and strong performance.</p>
+            <p>Skilled is not a tourist guild, not a seasonal carry, not a learning guild. We build long-term raiders who value consistency, accountability, and clean execution.</p>
+            
             <ul class="vision-list">
-                <li>Cutting Edge mentality and individual preparation</li>
-                <li>High attendance reliability for progression pushes</li>
-                <li>Active involvement in community keys and team content</li>
+                <li>We recruit players, not parses</li>
+                <li>Preparation, mindset, and teamwork matter</li>
+                <li>Show up, improve, and commit</li>
+                <li>Aiming for Cutting Edge, not just heroic clears</li>
             </ul>
+            
+            <p style="font-size:1.1rem; font-weight:500;">
+                Priority on <strong>Ranged DPS</strong> and <strong>Healers</strong>, but exceptional players of any role are welcome.
+            </p>
         </div>
     </section>
 
     <section id="schedule">
-        <h2>Raid Schedule</h2>
+        <h2>Raid Schedule (CST)</h2>
         <div class="schedule-container">
             <div class="schedule-item">
                 <h3>Tuesday</h3>
-                <p>8:00 PM – 11:00 PM<br><strong>CST</strong></p>
+                <p>8:00 – 11:00 PM</p>
+                <p><strong>3 Hours</strong></p>
             </div>
             <div class="schedule-item">
                 <h3>Wednesday</h3>
-                <p>8:00 PM – 11:00 PM<br><strong>CST</strong></p>
+                <p>8:00 – 10:00 PM</p>
+                <p><strong>2 Hours</strong></p>
             </div>
             <div class="schedule-item">
                 <h3>Thursday</h3>
-                <p>8:00 PM – 11:00 PM<br><strong>CST</strong></p>
+                <p>8:00 – 11:00 PM</p>
+                <p><strong>3 Hours</strong></p>
             </div>
         </div>
     </section>
@@ -301,27 +319,50 @@
     <section id="offer">
         <h2>What We Offer</h2>
         <div class="offer-list">
-            <p><strong>Focused Raid Support:</strong> Provided flasks, food, and high-tier progression support assets.</p>
-            <p><strong>Active Community:</strong> Off-night Mythic+ grouping, alt raids, and cooperative game content.</p>
-            <p><strong>Stable Roster Management:</strong> Transparent roles, open communication, and strategic planning.</p>
+            <p>Focused Mythic progression with experienced leadership</p>
+            <p>Organized, drama-free raid environment</p>
+            <p>Stable core roster that actually stays together</p>
+            <p>Active guild outside of raid with optional alt nights</p>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Join Us</h2>
+        <h2>How to Join / Apply</h2>
         <div class="contact-grid">
             <div class="contact-card">
                 <h3>Battle.net</h3>
-                <p>Morph#11503</p>
+                <p style="font-size:1.55rem; margin-top:12px; color:var(--gold);"><strong>Morph#11503</strong></p>
             </div>
             <div class="contact-card">
                 <h3>Discord</h3>
-                <p>Morph#6932</p>
+                <p style="font-size:1.55rem; margin-top:12px; color:var(--gold);"><strong>Morph#6932</strong></p>
             </div>
         </div>
-        <a href="https://github.io" target="_blank" class="discord-button">Apply on Discord</a>
+        <p style="margin-top:25px; font-size:1.05rem;">Message either for a quick chat — we reply fast.</p>
     </section>
 
-    <footer id="links">
-        <div style="margin-bottom: 20px;">
-            <a href="https://raider.io" target="_blank" style="color: var(--gold); margin: 0 10px; text-decoration: none;">Raider.IO</a> | 
+    <section id="links">
+        <h2>Join Our Community</h2>
+        <a href="https://discord.gg/qzAyheAHGr" target="_blank" class="discord-button">Join Our Discord</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Skilled Guild – Mal'Ganis</p>
+        <p>
+            <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
+            <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
+            <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
+            <a href="https://worldofwarcraft.blizzard.com/en-us/guild/US/malganis/skilled" target="_blank">Armory</a>
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Skilled Guild – Mythic Raiding | Mal'Ganis</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
+        @import url('https://googleapis.com');
 
         :root {
             --gold: #f7d358;
@@ -69,6 +69,7 @@
             font-size: 1.15rem;
             transition: all 0.3s ease;
             border-radius: 6px;
+            text-decoration: none;
         }
 
         nav ul li a:hover {
@@ -235,6 +236,16 @@
             border-top: 3px solid var(--gold);
         }
 
+        footer p a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer p a:hover {
+            color: var(--orange);
+        }
+
         @media (max-width: 768px) {
             section { padding: 60px 15px; }
             .vision-content { padding: 0 15px; }
@@ -248,7 +259,6 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#progress">Progress</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#offer">What We Offer</a></li>
@@ -257,7 +267,6 @@
             </ul>
         </nav>
     </header>
-
     <section id="about">
         <h2>Midnight Tier 1 – Voidspire / Dreamrift</h2>
         <p style="max-width:820px; margin:0 auto 30px; font-size:1.1rem;">
@@ -265,15 +274,6 @@
         </p>
         <div class="expansion-image">
             <img src="raid-night.png" alt="Midnight Raid Night">
-        </div>
-    </section>
-
-    <section id="progress">
-        <h2>Midnight Tier 1 Progression</h2>
-        <div class="schedule-container">
-            <div class="schedule-item"><h3>Mythic</h3><p><strong>2/9</strong><br>Chimaerus • Vorasius</p></div>
-            <div class="schedule-item"><h3>Heroic</h3><p><strong>7/9</strong></p></div>
-            <div class="schedule-item"><h3>Normal</h3><p><strong>9/9</strong></p></div>
         </div>
     </section>
 
@@ -305,8 +305,8 @@
             </div>
             <div class="schedule-item">
                 <h3>Wednesday</h3>
-                <p>8:00 – 10:00 PM</p>
-                <p><strong>2 Hours</strong></p>
+                <p>8:00 – 11:00 PM</p>
+                <p><strong>3 Hours</strong></p>
             </div>
             <div class="schedule-item">
                 <h3>Thursday</h3>
@@ -348,7 +348,7 @@
 
     <footer>
         <p>&copy; 2026 Skilled Guild – Mal'Ganis</p>
-        <p>
+        <p style="margin-top: 15px;">
             <a href="https://www.wowprogress.com/guild/us/mal-ganis/Skilled" target="_blank">WowProgress</a> |
             <a href="https://raider.io/guilds/us/malganis/Skilled" target="_blank">Raider.IO</a> |
             <a href="https://www.warcraftlogs.com/guild/id/370860" target="_blank">WarcraftLogs</a> |
